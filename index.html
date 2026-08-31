@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubens Pereira Fernandes — Currículo | Logística & Tecnologia</title>
+    <meta name="description" content="Portfólio profissional de Rubens Pereira Fernandes — Especialista em Logística, Operação de Empilhadeira e Tecnologia. Disponível para oportunidades em Limoeiro, PE.">
+    <meta name="keywords" content="portfólio, rubens pereira fernandes, logística, empilhadeira, power bi, tecnologia, limoeiro, pernambuco">
+    <meta name="author" content="Rubens Pereira Fernandes">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0071e3">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Rubens Pereira Fernandes — Portfólio">
+    <meta property="og:description" content="Especialista em Logística, Operação de Empilhadeira e Tecnologia. Disponível para oportunidades.">
+    <meta property="og:image" content="foto-avatar.webp">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rubens Pereira Fernandes — Portfólio">
+    <meta name="twitter:description" content="Especialista em Logística, Operação de Empilhadeira e Tecnologia.">
+    <meta name="twitter:image" content="foto-avatar.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="foto-avatar.webp">
+    <link rel="apple-touch-icon" href="foto-avatar.webp">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #ffffff;
+            --bg-2: #f5f5f7;
+            --bg-3: #e8e8ed;
+            --border: #d2d2d7;
+            --text: #1d1d1f;
+            --text-2: #6e6e73;
+            --text-3: #86868b;
+            --blue: #0071e3;
+            --blue-hover: #0077ED;
+            --blue-dim: #eff6ff;
+            --purple: #5856d6;
+            --pink: #bf5af2;
+            --green: #34c759;
+            --green-dim: #f0fdf4;
+            --green-border: #bbf7d0;
+            --red: #ff3b30;
+            --orange: #ff9500;
+            --card-shadow: rgba(0,0,0,0.06);
+            --card-shadow-hover: rgba(0,0,0,0.08);
+        }
+
+        [data-theme="dark"] {
+            --bg: #1c1c1e;
+            --bg-2: #2c2c2e;
+            --bg-3: #3a3a3c;
+            --border: #48484a;
+            --text: #f5f5f7;
+            --text-2: #a1a1a6;
+            --text-3: #8e8e93;
+            --blue-dim: rgba(0,113,227,0.15);
+            --green-dim: rgba(52,199,89,0.15);
+            --green-border: rgba(52,199,89,0.3);
+            --card-shadow: rgba(0,0,0,0.3);
+            --card-shadow-hover: rgba(0,0,0,0.5);
+        }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* ===== LOADER ===== */
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: var(--bg);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.6s, visibility 0.6s;
+        }
+
+        .loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+        .loader-content { text-align: center; }
+
+        .loader-name {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            background: linear-gradient(90deg, var(--blue), var(--purple), var(--pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            animation: loaderPulse 1s ease-in-out infinite;
+        }
+
+        @keyframes loaderPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.7; }
+        }
+
+        .loader-bar {
+            width: 120px;
+            height: 3px;
+            background: var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .loader-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--blue), var(--purple));
+            width: 0;
+            border-radius: 2px;
+            animation: loaderFill 1.5s ease forwards;
+        }
+
+        @keyframes loaderFill {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        /* ===== SKIP LINK (Accessibility) ===== */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--blue);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 0 0 8px 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            z-index: 10000;
+            transition: top 0.3s;
+            text-decoration: none;
+        }
+
+        .skip-link:focus { top: 0; }
+
+        /* ===== NAV ===== */
+        .nav {
+            background: rgba(255,255,255,0.82);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow 0.3s, background 0.3s;
+        }
+
+        [data-theme="dark"] .nav {
+            background: rgba(28,28,30,0.82);
+        }
+
+        .nav.scrolled { box-shadow: 0 1px 10px var(--card-shadow); }
+
+        .nav-inner {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 22px;
+            height: 44px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links { display: flex; gap: 1.8rem; align-items: center; }
+
+        .nav-links a {
+            font-size: 0.8rem;
+            color: var(--text-2);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible { color: var(--text); }
+
+        .nav-cta {
+            background: var(--blue) !important;
+            color: #fff !important;
+            padding: 0.35rem 0.9rem !important;
+            border-radius: 980px;
+            font-weight: 500 !important;
+        }
+
+        .nav-cta:hover { opacity: 0.9; }
+
+        /* ===== THEME TOGGLE ===== */
+        .theme-toggle {
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+
+        .theme-toggle:hover { background: var(--bg-3); transform: rotate(15deg); }
+
+        .theme-toggle:focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: 2px;
+        }
+
+        /* ===== HAMBURGER MENU ===== */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .hamburger:hover { background: var(--bg-2); }
+
+        .hamburger:focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: 2px;
+        }
+
+        .hamburger-lines {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 20px;
+        }
+
+        .hamburger-line {
+            display: block;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .hamburger.active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active .hamburger-line:nth-child(2) { opacity: 0; }
+
+        .hamburger.active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: var(--bg);
+            z-index: 998;
+            padding-top: 44px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            gap: 0;
+        }
+
+        .mobile-menu-links a {
+            display: block;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.3s;
+        }
+
+        .mobile-menu-links a:hover,
+        .mobile-menu-links a:focus-visible { background: var(--bg-2); }
+
+        .mobile-menu-links a:last-child {
+            border-bottom: none;
+            color: var(--blue);
+            font-weight: 600;
+            margin-top: 1rem;
+            background: var(--blue-dim);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .mobile-menu { display: block; }
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            text-align: center;
+            padding: 5rem 1.5rem 4rem;
+            background: linear-gradient(180deg, var(--bg-2) 0%, rgba(245,245,247,0.8) 100%);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            transition: background 0.3s;
+        }
+
+        [data-theme="dark"] .hero {
+            background: linear-gradient(180deg, var(--bg-2) 0%, rgba(44,44,46,0.8) 100%);
+        }
+
+        .hero-enter > * {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .hero-enter.animate > * {
+            animation: heroReveal 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        .hero-enter.animate > *:nth-child(1) { animation-delay: 0.1s; }
+        .hero-enter.animate > *:nth-child(2) { animation-delay: 0.2s; }
+        .hero-enter.animate > *:nth-child(3) { animation-delay: 0.3s; }
+        .hero-enter.animate > *:nth-child(4) { animation-delay: 0.4s; }
+        .hero-enter.animate > *:nth-child(5) { animation-delay: 0.5s; }
+        .hero-enter.animate > *:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes heroReveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-bg-photo {
+            position: absolute;
+            bottom: 0;
+            right: 10%;
+            width: 320px;
+            height: auto;
+            opacity: 0.12;
+            pointer-events: none;
+            z-index: 0;
+            transition: opacity 0.5s;
+        }
+
+        .hero-bg-img {
+            width: 100%;
+            height: auto;
+            filter: grayscale(0.3);
+        }
+
+        .hero:hover .hero-bg-photo { opacity: 0.18; }
+
+        @media (max-width: 768px) {
+            .hero-bg-photo { width: 200px; right: 5%; opacity: 0.08; }
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0,113,227,0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content { position: relative; z-index: 1; }
+
+        .hero-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            margin: 0 auto 1.5rem;
+            display: block;
+            border: 3px solid var(--border);
+            transition: all 0.5s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+            animation: avatarFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes avatarFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .hero-avatar:hover {
+            transform: scale(1.08);
+            border-color: var(--blue);
+            box-shadow: 0 15px 40px rgba(0,113,227,0.2);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--green-dim);
+            color: var(--green);
+            padding: 0.3rem 0.7rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            border: 1px solid var(--green-border);
+            animation: badgePulse 3s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--green);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 4rem);
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
+            margin-bottom: 0.6rem;
+            display: none;
+        }
+
+        .hero-name-parallax {
+            margin-bottom: 0.8rem;
+            perspective: 1000px;
+            position: relative;
+        }
+
+        .name-layer {
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
+            transition: transform 0.1s ease-out;
+            will-change: transform;
+        }
+
+        .name-layer-1 {
+            font-size: clamp(3.5rem, 8vw, 6rem);
+            color: var(--text);
+            text-shadow: 
+                1px 1px 0 var(--border),
+                2px 2px 0 rgba(180,180,180,0.5),
+                3px 3px 0 rgba(160,160,160,0.4),
+                4px 4px 0 rgba(140,140,140,0.3),
+                5px 5px 15px rgba(0,0,0,0.15);
+            transform: translateZ(0px);
+        }
+
+        .name-layer-2 {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            background: linear-gradient(90deg, var(--blue), var(--purple), var(--pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 0.3rem;
+            transform: translateZ(0px);
+        }
+
+        .hero h1 .gradient {
+            background: linear-gradient(90deg, var(--blue), var(--purple), var(--pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: gradientShift 4s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero-role {
+            font-size: 1.15rem;
+            color: var(--text-2);
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.8rem;
+            font-size: 0.88rem;
+            color: var(--text-2);
+        }
+
+        .hero-meta strong { color: var(--text); }
+
+        .hero-actions { display: flex; gap: 0.7rem; justify-content: center; flex-wrap: wrap; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.65rem 1.3rem;
+            border-radius: 980px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: 2px;
+        }
+
+        .btn-primary { background: var(--blue); color: #fff; }
+        .btn-primary:hover { background: var(--blue-hover); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,113,227,0.25); }
+        .btn-outline { color: var(--blue); border: 1px solid var(--border); background: var(--bg); }
+        .btn-outline:hover { border-color: var(--blue); transform: translateY(-2px); }
+
+        /* ===== STATS ===== */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 22px;
+        }
+
+        .stat {
+            background: var(--bg-2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+            cursor: default;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px var(--card-shadow-hover);
+        }
+
+        .stat-num {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, var(--blue), var(--purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            color: var(--text-3);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            margin-top: 0.2rem;
+        }
+
+        /* ===== SECTION ===== */
+        .section {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 5rem 22px;
+            text-align: center;
+        }
+
+        .section-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--blue);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.4rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-desc {
+            font-size: 1rem;
+            color: var(--text-2);
+            margin-bottom: 2.5rem;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .section-divider {
+            max-width: 980px;
+            margin: 0 auto;
+            border: none;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ===== SKILLS ===== */
+        .skills {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .skill {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.2rem;
+            background: var(--bg-2);
+            border-radius: 14px;
+            transition: all 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+        }
+
+        .skill:hover {
+            transform: translateX(8px);
+            background: var(--bg-3);
+        }
+
+        .skill-icon {
+            font-size: 1.2rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+
+        .skill:hover .skill-icon { transform: scale(1.1); }
+
+        .skill-info { flex: 1; }
+        .skill-name { font-size: 0.88rem; font-weight: 600; margin-bottom: 0.3rem; }
+
+        .skill-bar { height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
+
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--blue), var(--purple));
+            border-radius: 3px;
+            width: 0;
+            transition: width 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .skill-pct {
+            font-size: 0.75rem;
+            color: var(--text-3);
+            font-weight: 500;
+            min-width: 30px;
+            text-align: right;
+        }
+
+        /* ===== CARDS ===== */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 10px;
+            text-align: left;
+        }
+
+        .card {
+            background: var(--bg-2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px var(--card-shadow);
+        }
+
+        .card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            transition: transform 0.3s;
+        }
+
+        .card:hover .card-icon { transform: scale(1.1); }
+
+        .card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.25rem; }
+        .card p { font-size: 0.85rem; color: var(--text-2); line-height: 1.5; }
+
+        /* ===== WHY ME ===== */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .why-item {
+            background: var(--bg-2);
+            padding: 2rem;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .why-item:hover { background: var(--bg-3); }
+
+        .why-icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .why-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .why-desc { font-size: 0.82rem; color: var(--text-2); line-height: 1.5; }
+
+        /* ===== VALUES ===== */
+        .values {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .value {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem;
+            background: var(--bg-2);
+            border-radius: 14px;
+            text-align: left;
+            transition: all 0.3s;
+        }
+
+        .value:hover { transform: translateX(5px); background: var(--bg-3); }
+
+        .value-icon { font-size: 1.5rem; }
+
+        .value-name { font-size: 0.9rem; font-weight: 600; }
+        .value-desc { font-size: 0.78rem; color: var(--text-2); }
+
+        /* ===== INTERESTS ===== */
+        .interests {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .interest {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--bg-2);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .interest:hover {
+            background: var(--blue-dim);
+            color: var(--blue);
+            transform: translateY(-2px);
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline { max-width: 600px; margin: 0 auto; text-align: left; }
+
+        .timeline-card {
+            background: var(--bg-2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+        }
+
+        .timeline-card:hover {
+            transform: translateX(8px);
+            background: var(--bg-3);
+        }
+
+        .timeline-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem; flex-wrap: wrap; gap: 0.5rem; }
+        .timeline-title { font-size: 1.05rem; font-weight: 700; }
+
+        .timeline-date {
+            font-size: 0.73rem;
+            font-weight: 500;
+            color: var(--blue);
+            background: var(--blue-dim);
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+        }
+
+        .timeline-company { font-size: 0.88rem; color: var(--text-2); margin-bottom: 0.5rem; }
+        .timeline-desc { font-size: 0.88rem; color: var(--text-2); line-height: 1.6; }
+
+        /* ===== CERTS ===== */
+        .certs {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .cert {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.85rem 1rem;
+            background: var(--bg-2);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .cert:hover { transform: translateX(5px); background: var(--bg-3); }
+
+        .cert-badge {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+
+        .cert:hover .cert-badge { transform: scale(1.1); }
+
+        .cert-name { font-size: 0.88rem; font-weight: 600; }
+        .cert-org { font-size: 0.73rem; color: var(--text-3); }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-form-wrapper {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: left;
+        }
+
+        .form-group { display: flex; flex-direction: column; gap: 4px; }
+
+        .form-group label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-2);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.7rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            background: var(--bg);
+            color: var(--text);
+            transition: border-color 0.3s, box-shadow 0.3s;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(0,113,227,0.15);
+        }
+
+        .form-group textarea { resize: vertical; min-height: 100px; }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+        .form-status {
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .form-status.success {
+            display: block;
+            background: var(--green-dim);
+            color: var(--green);
+            border: 1px solid var(--green-border);
+        }
+
+        .form-status.error {
+            display: block;
+            background: rgba(255,59,48,0.1);
+            color: var(--red);
+            border: 1px solid rgba(255,59,48,0.2);
+        }
+
+        @media (max-width: 500px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        /* ===== CONTACTS GRID ===== */
+        .contacts {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact {
+            background: var(--bg-2);
+            border-radius: 14px;
+            padding: 1.2rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+        }
+
+        .contact:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px var(--card-shadow);
+        }
+
+        .contact-icon { font-size: 1.3rem; margin-bottom: 0.6rem; }
+
+        .contact-label {
+            font-size: 0.7rem;
+            color: var(--text-3);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            margin-bottom: 0.1rem;
+        }
+
+        .contact-value { font-size: 0.85rem; font-weight: 600; }
+
+        /* ===== CTA ===== */
+        .cta {
+            background: var(--bg-2);
+            padding: 4rem 22px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .cta h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta p { font-size: 0.95rem; color: var(--text-2); margin-bottom: 1.5rem; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        footer p { font-size: 0.8rem; color: var(--text-3); }
+        footer a { color: var(--blue); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero { padding: 4rem 1rem 3rem; }
+            .hero-avatar { width: 110px; height: 110px; }
+            .stats { grid-template-columns: repeat(2, 1fr); padding: 2rem 1rem; }
+            .why-grid { grid-template-columns: 1fr; }
+            .values { grid-template-columns: 1fr; }
+            .cards { grid-template-columns: 1fr; }
+            .contacts { grid-template-columns: 1fr; }
+            .section { padding: 3rem 1rem; }
+        }
+
+        /* ===== REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            .loader, .nav, .hamburger, .mobile-menu, .theme-toggle,
+            .hero-bg-photo, .hero-badge, .hero-actions, .cta,
+            .skip-link { display: none !important; }
+
+            body {
+                background: #fff !important;
+                color: #000 !important;
+                font-size: 11pt;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 2rem 0;
+                background: none !important;
+                border-bottom: 2px solid #000;
+            }
+
+            .hero-avatar {
+                width: 80px;
+                height: 80px;
+                animation: none;
+                border-color: #000;
+            }
+
+            .name-layer-1 { font-size: 2rem; text-shadow: none; color: #000; }
+            .name-layer-2 { font-size: 1.2rem; -webkit-text-fill-color: #333; }
+
+            .section { padding: 1.5rem 0; }
+            .section-divider { border-top-color: #ccc; }
+
+            .stat, .skill, .card, .why-item, .value, .interest,
+            .timeline-card, .cert, .contact {
+                background: #f5f5f5 !important;
+                box-shadow: none !important;
+                transform: none !important;
+                break-inside: avoid;
+            }
+
+            .skill-fill { background: #333 !important; }
+
+            .contact-form-wrapper { display: none; }
+
+            footer { border-top: 1px solid #ccc; }
+            footer a { color: #000; }
+
+            a[href]::after { content: none; }
+        }
+    </style>
+</head>
+<body>
+<!--
+====================================================================
+  PORTFÓLIO — Rubens Pereira Fernandes
+  Estilo idêntico ao curriculo-site. Para editar:
+    • Nome / idade / local ............ seção HERO (abaixo)
+    • Email / WhatsApp / LinkedIn ..... seções HERO, CONTATO e rodapé
+    • Habilidades (barras) ............ seção #skills  (data-width = %)
+    • Projetos ......................... seção #projetos
+    • Experiência / Formação / Certif.  seções #exp / #edu / #certs
+  Fotos usadas: foto-avatar.webp (rosto) e foto-sem-fundo.png (fundo)
+====================================================================
+-->
+<a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+<!-- Loading Screen -->
+<div class="loader" id="loader" role="status" aria-label="Carregando página">
+    <div class="loader-content">
+        <div class="loader-name">RPF</div>
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+</div>
+
+<!-- Nav -->
+<nav class="nav" id="nav" role="navigation" aria-label="Navegação principal">
+    <div class="nav-inner">
+        <a href="#" class="nav-logo" aria-label="Voltar ao início">RPF</a>
+        <div class="nav-links" role="menubar">
+            <a href="#sobre" role="menuitem">Sobre</a>
+            <a href="#skills" role="menuitem">Habilidades</a>
+            <a href="#projetos" role="menuitem">Projetos</a>
+            <a href="#porque" role="menuitem">Por que me</a>
+            <a href="#exp" role="menuitem">Experiência</a>
+            <a href="#certs" role="menuitem">Certificações</a>
+            <a href="#contato" class="nav-cta" role="menuitem">Contato</a>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro" title="Alternar tema">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+                <div class="hamburger-lines"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></div>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu mobile">
+    <div class="mobile-menu-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#porque">Por que me contratar</a>
+        <a href="#exp">Experiência</a>
+        <a href="#certs">Certificações</a>
+        <a href="#contato">💬 Fale comigo</a>
+    </div>
+</div>
+
+<main id="main-content">
+
+<!-- Hero -->
+<section class="hero" aria-label="Apresentação">
+    <div class="hero-bg-photo" aria-hidden="true">
+        <img src="foto-sem-fundo.png" alt="" class="hero-bg-img" loading="lazy">
+    </div>
+    <div class="hero-content hero-enter">
+        <img src="foto-avatar.webp" alt="Foto de Rubens Pereira Fernandes" class="hero-avatar" loading="lazy">
+        <div class="hero-badge">Disponível para oportunidades</div>
+        <div class="hero-name-parallax" id="parallaxName">
+            <div class="name-layer name-layer-1" data-speed="0.02">Rubens</div>
+            <div class="name-layer name-layer-2" data-speed="0.04">Pereira Fernandes</div>
+        </div>
+        <div class="hero-role">Logística &amp; Tecnologia</div>
+        <div class="hero-meta">
+            <div>📍 <strong>Limoeiro, PE</strong></div>
+            <div>🎂 <strong>26 anos</strong></div>
+            <div>📞 <strong>+55 81 98950-1999</strong></div>
+        </div>
+        <div class="hero-actions">
+            <a href="mailto:rubensfernandes2112@gmail.com" class="btn btn-primary">✉️ Enviar email</a>
+            <a href="https://wa.me/5581989501999" target="_blank" rel="noopener noreferrer" class="btn btn-outline">💬 WhatsApp</a>
+            <a href="https://linkedin.com/in/rubens-fernandes-766390185" target="_blank" rel="noopener noreferrer" class="btn btn-outline">🔗 LinkedIn</a>
+        </div>
+    </div>
+</section>
+
+<!-- Stats -->
+<div class="stats" role="list" aria-label="Estatísticas">
+    <div class="stat reveal" role="listitem"><div class="stat-num" aria-label="7 certificações">7</div><div class="stat-label">Certificações</div></div>
+    <div class="stat reveal reveal-delay-1" role="listitem"><div class="stat-num" aria-label="Mais de 1 ano de experiência">1+</div><div class="stat-label">Ano Exp.</div></div>
+    <div class="stat reveal reveal-delay-2" role="listitem"><div class="stat-num" aria-label="5 projetos">5</div><div class="stat-label">Projetos</div></div>
+    <div class="stat reveal reveal-delay-3" role="listitem"><div class="stat-num" aria-label="3 áreas de atuação">3</div><div class="stat-label">Áreas</div></div>
+</div>
+
+<!-- Sobre -->
+<section class="section" id="sobre" aria-labelledby="sobre-title">
+    <div class="section-label reveal">Sobre mim</div>
+    <h2 id="sobre-title" class="section-title reveal">Profissional dedicado<br>em constante evolução.</h2>
+    <p class="section-desc reveal">
+        Com experiência em operações de logística e depósito em empresas de grande porte, combino conhecimentos técnicos com habilidades interpessoais. Na área de tecnologia, desenvolvo soluções com Python, Docker e automações — buscando sempre evoluir e contribuir para o crescimento da organização.
+    </p>
+</section>
+
+<hr class="section-divider">
+
+<!-- Por que me contratar -->
+<section class="section" id="porque" aria-labelledby="porque-title">
+    <div class="section-label reveal">Por que me contratar</div>
+    <h2 id="porque-title" class="section-title reveal">O que me destaca</h2>
+    <div class="why-grid reveal">
+        <div class="why-item"><span class="why-icon" aria-hidden="true">⚡</span><div class="why-title">Rápido aprendizado</div><div class="why-desc">Aprendo novas habilidades com facilidade e aplico no dia a dia.</div></div>
+        <div class="why-item"><span class="why-icon" aria-hidden="true">🎯</span><div class="why-title">Foco em resultados</div><div class="why-desc">Comprometido com metas e superação de expectativas.</div></div>
+        <div class="why-item"><span class="why-icon" aria-hidden="true">🤝</span><div class="why-title">Trabalho em equipe</div><div class="why-desc">Colaboro para atingir objetivos em comum.</div></div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- Projetos (NOVA SEÇÃO de portfólio) -->
+<section class="section" id="projetos" aria-labelledby="projetos-title">
+    <div class="section-label reveal">Portfólio</div>
+    <h2 id="projetos-title" class="section-title reveal">Projetos em destaque</h2>
+    <p class="section-desc reveal">Alguns trabalhos e soluções que desenvolvi nas áreas de tecnologia e logística.</p>
+    <div class="cards reveal">
+        <a class="card" href="#" target="_blank" rel="noopener noreferrer"><div class="card-icon" aria-hidden="true">🐍</div><h3>Sistema de Estoque (Python)</h3><p>Controle de inventário e relatórios automatizados com Python.</p></a>
+        <a class="card" href="#" target="_blank" rel="noopener noreferrer"><div class="card-icon" aria-hidden="true">🐳</div><h3>API FastAPI + Docker</h3><p>API REST containerizada para integração de dados logísticos.</p></a>
+        <a class="card" href="#" target="_blank" rel="noopener noreferrer"><div class="card-icon" aria-hidden="true">📊</div><h3>Dashboard Power BI</h3><p>Painéis de indicadores de operação e produtividade.</p></a>
+        <a class="card" href="#" target="_blank" rel="noopener noreferrer"><div class="card-icon" aria-hidden="true">⚙️</div><h3>Automação n8n</h3><p>Fluxos de automação de tarefas e notificações.</p></a>
+        <a class="card" href="#" target="_blank" rel="noopener noreferrer"><div class="card-icon" aria-hidden="true">🤖</div><h3>RUBI — Assistente de Voz</h3><p>Assistente pessoal offline (voz PT-BR) com IA local.</p></a>
+        <a class="card" href="#" target="_blank" rel="noopener noreferrer"><div class="card-icon" aria-hidden="true">🌐</div><h3>Site de Currículo</h3><p>Este próprio portfólio, feito em HTML/CSS responsivo.</p></a>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- Skills -->
+<section class="section" id="skills" aria-labelledby="skills-title">
+    <div class="section-label reveal">Habilidades</div>
+    <h2 id="skills-title" class="section-title reveal">O que sei fazer</h2>
+    <div class="skills reveal" role="list">
+        <div class="skill" role="listitem"><div class="skill-icon" aria-hidden="true">🏗️</div><div class="skill-info"><div class="skill-name">Operação de Empilhadeira</div><div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Operação de Empilhadeira: 90%"><div class="skill-fill" data-width="90"></div></div></div><div class="skill-pct">90%</div></div>
+        <div class="skill" role="listitem"><div class="skill-icon" aria-hidden="true">📦</div><div class="skill-info"><div class="skill-name">Logística de Depósito</div><div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Logística de Depósito: 85%"><div class="skill-fill" data-width="85"></div></div></div><div class="skill-pct">85%</div></div>
+        <div class="skill" role="listitem"><div class="skill-icon" aria-hidden="true">📊</div><div class="skill-info"><div class="skill-name">Power BI</div><div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Power BI: 70%"><div class="skill-fill" data-width="70"></div></div></div><div class="skill-pct">70%</div></div>
+        <div class="skill" role="listitem"><div class="skill-icon" aria-hidden="true">💻</div><div class="skill-info"><div class="skill-name">Informática</div><div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Informática: 75%"><div class="skill-fill" data-width="75"></div></div></div><div class="skill-pct">75%</div></div>
+        <div class="skill" role="listitem"><div class="skill-icon" aria-hidden="true">🌐</div><div class="skill-info"><div class="skill-name">HTML / CSS</div><div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="HTML / CSS: 60%"><div class="skill-fill" data-width="60"></div></div></div><div class="skill-pct">60%</div></div>
+        <div class="skill" role="listitem"><div class="skill-icon" aria-hidden="true">☕</div><div class="skill-info"><div class="skill-name">Java</div><div class="skill-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="Java: 45%"><div class="skill-fill" data-width="45"></div></div></div><div class="skill-pct">45%</div></div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- Valores -->
+<section class="section" aria-labelledby="valores-title">
+    <div class="section-label reveal">Valores</div>
+    <h2 id="valores-title" class="section-title reveal">No que acredito</h2>
+    <div class="values reveal">
+        <div class="value"><div class="value-icon" aria-hidden="true">🎯</div><div><div class="value-name">Dedicação</div><div class="value-desc">Entrego o máximo em tudo que faço</div></div></div>
+        <div class="value"><div class="value-icon" aria-hidden="true">🔍</div><div><div class="value-name">Responsabilidade</div><div class="value-desc">Cumpro prazos e compromissos</div></div></div>
+        <div class="value"><div class="value-icon" aria-hidden="true">📚</div><div><div class="value-name">Aprendizado</div><div class="value-desc">Busco sempre evoluir</div></div></div>
+        <div class="value"><div class="value-icon" aria-hidden="true">💪</div><div><div class="value-name">Resiliência</div><div class="value-desc">Supero desafios com positividade</div></div></div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- Soft Skills -->
+<section class="section" aria-labelledby="skills-soft-title">
+    <div class="section-label reveal">Competências</div>
+    <h2 id="skills-soft-title" class="section-title reveal">Qualidades</h2>
+    <div class="cards reveal">
+        <div class="card"><div class="card-icon" aria-hidden="true">🎯</div><h3>Foco em Resultados</h3><p>Comprometido com a superação de expectativas.</p></div>
+        <div class="card"><div class="card-icon" aria-hidden="true">🤝</div><h3>Trabalho em Equipe</h3><p>Colaboro para atingir objetivos em comum.</p></div>
+        <div class="card"><div class="card-icon" aria-hidden="true">📚</div><h3>Aprendizado Contínuo</h3><p>7 certificações em áreas diversas.</p></div>
+        <div class="card"><div class="card-icon" aria-hidden="true">🔍</div><h3>Atenção aos Detalhes</h3><p>Conferência rigorosa do inventário.</p></div>
+        <div class="card"><div class="card-icon" aria-hidden="true">⏰</div><h3>Pontualidade</h3><p>Responsabilidade com prazos.</p></div>
+        <div class="card"><div class="card-icon" aria-hidden="true">💪</div><h3>Resiliência</h3><p>Capacidade de adaptação.</p></div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- Interesses -->
+<section class="section" aria-labelledby="interesses-title">
+    <div class="section-label reveal">Interesses</div>
+    <h2 id="interesses-title" class="section-title reveal">O que me motiva</h2>
+    <div class="interests reveal" role="list">
+        <div class="interest" role="listitem">🚚 Logística</div>
+        <div class="interest" role="listitem">💻 Tecnologia</div>
+        <div class="interest" role="listitem">📊 Dados</div>
+        <div class="interest" role="listitem">🐍 Python</div>
+        <div class="interest" role="listitem">🐳 Docker</div>
+        <div class="interest" role="listitem">🎮 Games</div>
+        <div class="interest" role="listitem">🎵 Música</div>
+        <div class="interest" role="listitem">📷 Fotografia</div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- Experiência -->
+<section class="section" id="exp" aria-labelledby="exp-title">
+    <div class="section-label reveal">Experiência</div>
+    <h2 id="exp-title" class="section-title reveal">Trajetória</h2>
+    <div class="timeline reveal">
+        <div class="timeline-card">
+            <div class="timeline-top">
+                <div class="timeline-title">Auxiliar de Depósito</div>
+                <div class="timeline-date">2022 — 2023</div>
+            </div>
+            <div class="timeline-company">Ferreira Costa — Recife, PE</div>
+            <div class="timeline-desc">Expedição, recebimento, entrega e reposição de mercadorias. Conferência rigorosa para garantia de integridade do inventário. Trabalho em equipe em ambiente de alto volume.</div>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- Educação -->
+<section class="section" aria-labelledby="edu-title">
+    <div class="section-label reveal">Formação</div>
+    <h2 id="edu-title" class="section-title reveal">Educação</h2>
+    <div class="timeline-card reveal" style="max-width: 450px; margin: 0 auto; text-align: left;">
+        <div class="timeline-top">
+            <div class="timeline-title">Ensino Médio Completo</div>
+            <div class="timeline-date">2021</div>
+        </div>
+        <div class="timeline-company">Escola Seráfico Ricardo — Limoeiro, PE</div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- Certificações -->
+<section class="section" id="certs" aria-labelledby="certs-title">
+    <div class="section-label reveal">Certificações</div>
+    <h2 id="certs-title" class="section-title reveal">Cursos</h2>
+    <div class="certs reveal" role="list">
+        <div class="cert" role="listitem"><div class="cert-badge" aria-hidden="true">🏗️</div><div><div class="cert-name">Operador de Empilhadeira</div><div class="cert-org">ESTTJ · 2024</div></div></div>
+        <div class="cert" role="listitem"><div class="cert-badge" aria-hidden="true">📦</div><div><div class="cert-name">Curso de Logística</div><div class="cert-org">EDUCAWEB · 2024</div></div></div>
+        <div class="cert" role="listitem"><div class="cert-badge" aria-hidden="true">📊</div><div><div class="cert-name">Power BI Intensivo</div><div class="cert-org">Hashtag Treinamentos · 2024</div></div></div>
+        <div class="cert" role="listitem"><div class="cert-badge" aria-hidden="true">☕</div><div><div class="cert-name">Java Básico</div><div class="cert-org">Fundação Bradesco · 2023</div></div></div>
+        <div class="cert" role="listitem"><div class="cert-badge" aria-hidden="true">🌐</div><div><div class="cert-name">Criação de Site (HTML, CSS, JS)</div><div class="cert-org">Fundação Bradesco · 2023</div></div></div>
+        <div class="cert" role="listitem"><div class="cert-badge" aria-hidden="true">📄</div><div><div class="cert-name">HTML Avançado</div><div class="cert-org">2023</div></div></div>
+        <div class="cert" role="listitem"><div class="cert-badge" aria-hidden="true">🖥️</div><div><div class="cert-name">Informática Básica</div><div class="cert-org">2017</div></div></div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- Formulário de Contato -->
+<section class="section" id="contato-form" aria-labelledby="contato-form-title">
+    <div class="section-label reveal">Mensagem</div>
+    <h2 id="contato-form-title" class="section-title reveal">Envie uma mensagem</h2>
+    <p class="section-desc reveal">Preencha o formulário abaixo e entrarei em contato o mais breve possível.</p>
+    <div class="contact-form-wrapper reveal">
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/rubensfernandes2112@gmail.com" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Nova mensagem do portfólio">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="form-name">Nome *</label>
+                    <input type="text" id="form-name" name="name" placeholder="Seu nome" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="form-email">Email *</label>
+                    <input type="email" id="form-email" name="email" placeholder="seu@email.com" required autocomplete="email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="form-subject">Assunto</label>
+                <input type="text" id="form-subject" name="subject" placeholder="Oportunidade de trabalho, parceria...">
+            </div>
+            <div class="form-group">
+                <label for="form-message">Mensagem *</label>
+                <textarea id="form-message" name="message" placeholder="Escreva sua mensagem..." required></textarea>
+            </div>
+            <div class="form-status" id="formStatus"></div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem;">✉️ Enviar mensagem</button>
+        </form>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" aria-label="Chamada para ação">
+    <h2 class="reveal">Vamos conversar?</h2>
+    <p class="reveal">Estou disponível para novas oportunidades.</p>
+    <div class="hero-actions reveal" style="justify-content: center;">
+        <a href="mailto:rubensfernandes2112@gmail.com" class="btn btn-primary">✉️ Enviar email</a>
+        <a href="https://wa.me/5581989501999" target="_blank" rel="noopener noreferrer" class="btn btn-outline">💬 WhatsApp</a>
+    </div>
+</section>
+
+<!-- Contato -->
+<section class="section" id="contato" aria-labelledby="contato-title">
+    <div class="section-label reveal">Contato</div>
+    <h2 id="contato-title" class="section-title reveal">Onde me encontrar</h2>
+    <div class="contacts reveal">
+        <a href="https://wa.me/5581989501999" target="_blank" rel="noopener noreferrer" class="contact">
+            <div class="contact-icon" aria-hidden="true">💬</div>
+            <div class="contact-label">WhatsApp</div>
+            <div class="contact-value">+55 81 98950-1999</div>
+        </a>
+        <a href="mailto:rubensfernandes2112@gmail.com" class="contact">
+            <div class="contact-icon" aria-hidden="true">✉️</div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">rubensfernandes2112@gmail.com</div>
+        </a>
+        <a href="tel:+5581989501999" class="contact">
+            <div class="contact-icon" aria-hidden="true">📱</div>
+            <div class="contact-label">Telefone</div>
+            <div class="contact-value">+55 81 98950-1999</div>
+        </a>
+        <a href="https://linkedin.com/in/rubens-fernandes-766390185" target="_blank" rel="noopener noreferrer" class="contact">
+            <div class="contact-icon" aria-hidden="true">🔗</div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">/in/rubens-fernandes</div>
+        </a>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Rubens Pereira Fernandes · <a href="mailto:rubensfernandes2112@gmail.com">rubensfernandes2112@gmail.com</a></p>
+</footer>
+
+</body>
+<script>
+(function() {
+    'use strict';
+
+    // ===== DARK MODE =====
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('.theme-icon');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Alternar para modo claro' : 'Alternar para modo escuro');
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else if (prefersDark.matches) {
+        setTheme('dark');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // ===== HAMBURGER MENU =====
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+        const isActive = hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active', isActive);
+        hamburger.setAttribute('aria-expanded', isActive);
+        document.body.style.overflow = isActive ? 'hidden' : '';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+            hamburger.focus();
+        }
+    });
+
+    // ===== NAV SCROLL =====
+    window.addEventListener('scroll', () => {
+        document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ===== REVEAL ON SCROLL =====
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                e.target.querySelectorAll('.skill-fill').forEach(b => {
+                    b.style.width = b.dataset.width + '%';
+                });
+            }
+        });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // ===== LOADER =====
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.getElementById('loader').classList.add('hidden');
+            document.querySelector('.hero-enter').classList.add('animate');
+        }, 1800);
+    });
+
+    // ===== PARALLAX NAME =====
+    const parallaxName = document.getElementById('parallaxName');
+    if (parallaxName) {
+        const layers = parallaxName.querySelectorAll('.name-layer');
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 2;
+            const y = (e.clientY / window.innerHeight - 0.5) * 2;
+            layers.forEach(layer => {
+                const speed = parseFloat(layer.dataset.speed);
+                const moveX = x * speed * 50;
+                const moveY = y * speed * 25;
+                const rotateY = x * speed * 8;
+                const rotateX = -y * speed * 5;
+                layer.style.transform = `translateX(${moveX}px) translateY(${moveY}px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+            });
+        });
+    }
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            const id = a.getAttribute('href');
+            if (id === '#') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+            const t = document.querySelector(id);
+            if (t) t.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // ===== COUNTER ANIMATION =====
+    const counters = document.querySelectorAll('.stat-num');
+    const counterObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const el = e.target;
+                const text = el.textContent;
+                const num = parseInt(text);
+                if (!isNaN(num)) {
+                    let current = 0;
+                    const step = Math.ceil(num / 20);
+                    const timer = setInterval(() => {
+                        current += step;
+                        if (current >= num) {
+                            el.textContent = text;
+                            clearInterval(timer);
+                        } else {
+                            el.textContent = current;
+                        }
+                    }, 40);
+                }
+                counterObs.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+    counters.forEach(c => counterObs.observe(c));
+
+    // ===== CONTACT FORM =====
+    const form = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            const name = form.querySelector('#form-name');
+            const email = form.querySelector('#form-email');
+            const message = form.querySelector('#form-message');
+
+            if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+                e.preventDefault();
+                formStatus.className = 'form-status error';
+                formStatus.textContent = 'Por favor, preencha todos os campos obrigatórios.';
+                return;
+            }
+
+            // Simple email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                e.preventDefault();
+                formStatus.className = 'form-status error';
+                formStatus.textContent = 'Por favor, insira um email válido.';
+                return;
+            }
+
+            // For FormSubmit.co, let the form submit normally
+            // Show success message via redirect or AJAX
+            formStatus.className = 'form-status success';
+            formStatus.textContent = 'Mensagem enviada! Entrarei em contato em breve. 🎉';
+        });
+    }
+
+})();
+</script>
+</html>
