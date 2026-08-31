@@ -269,7 +269,32 @@ footer a{color:var(--text-2)}
 .lightbox.active{opacity:1;visibility:visible}
 .lightbox img{max-width:92vw;max-height:88vh;border-radius:12px;box-shadow:var(--shadow)}
 .lightbox .lb-close{position:absolute;top:18px;right:24px;font-size:2.2rem;color:#fff;background:none;border:none;cursor:pointer;line-height:1}
-}
+
+/* ============ SCROLL PROGRESS ============ */
+.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:200;background:var(--grad);box-shadow:0 0 12px var(--purple)}
+
+/* ============ BACK TO TOP ============ */
+.to-top{position:fixed;bottom:22px;right:22px;z-index:150;width:48px;height:48px;border-radius:14px;
+  display:grid;place-items:center;cursor:pointer;font-size:1.3rem;color:#fff;
+  background:var(--grad);border:none;box-shadow:0 10px 30px rgba(124,92,255,.45);
+  opacity:0;visibility:hidden;transform:translateY(16px);transition:.35s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{transform:translateY(-3px)}
+
+/* ============ HERO MOUSE GLOW ============ */
+.hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,40%),rgba(124,92,255,.18),transparent 60%)}
+
+/* ============ GRADIENT ANIMADO NO NOME ============ */
+.hero h1 .grad-text{background:linear-gradient(120deg,#0071e3,#7c5cff,#ff5cc8,#22d3ee,#0071e3);
+  background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  animation:gradMove 8s linear infinite}
+@keyframes gradMove{to{background-position:300% 0}}
+
+/* ============ NAV ACTIVE LINK ============ */
+.nav-links a.active{color:var(--text);background:var(--panel-strong)}
+.nav-links a.active::after{content:'';position:absolute}
+
 @media(max-width:680px){
   .nav-links{display:none}
   .hamburger{display:flex}
@@ -483,6 +508,10 @@ footer a{color:var(--text-2)}
   © 2026 Rubens Pereira Fernandes · <a href="mailto:rubensfernandes2112@gmail.com">rubensfernandes2112@gmail.com</a>
 </footer>
 
+<!-- SCROLL PROGRESS + BACK TO TOP -->
+<div class="scroll-progress" id="scrollProgress"></div>
+<button class="to-top" id="toTop" aria-label="Voltar ao topo">↑</button>
+
 <script>
 /* ===== TEMA ===== */
 const root=document.documentElement, tIcon=document.getElementById('themeIcon');
@@ -660,6 +689,39 @@ const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lb-i
 function openLB(src){lbImg.src=src;lb.classList.add('active');document.body.style.overflow='hidden';}
 lb.addEventListener('click',()=>{lb.classList.remove('active');document.body.style.overflow='';lbImg.src='';});
 addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('active');document.body.style.overflow='';lbImg.src='';}});
+
+/* ===== MELHORIAS: scroll progress, back-to-top, hero glow, nav ativa ===== */
+const sp=document.getElementById('scrollProgress'),tt=document.getElementById('toTop');
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const pct=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
+  sp.style.width=pct+'%';
+  tt.classList.toggle('show',h.scrollTop>500);
+},{passive:true});
+tt.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+
+// glow do mouse no hero
+const hero=document.querySelector('.hero');
+addEventListener('mousemove',e=>{
+  if(!hero)return;
+  hero.style.setProperty('--mx',(e.clientX/innerWidth*100)+'%');
+  hero.style.setProperty('--my',(e.clientY/innerHeight*100)+'%');
+});
+
+// link ativo no menu conforme a seção visível
+const navLinks=[...document.querySelectorAll('.nav-links a[href^="#"]')];
+const secs=navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+if(secs.length){
+  const navObs=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        const id='#'+e.target.id;
+        navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')===id));
+      }
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(s=>navObs.observe(s));
+}
 </script>
 </body>
 </html>
