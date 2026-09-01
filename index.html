@@ -101,7 +101,10 @@ a{color:inherit;text-decoration:none}
 .badge .pulse{width:7px;height:7px;border-radius:50%;background:#34c759;box-shadow:0 0 0 0 #34c759;
   animation:pulse 2s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,199,89,.6)}70%{box-shadow:0 0 0 9px rgba(52,199,89,0)}100%{box-shadow:0 0 0 0 rgba(52,199,89,0)}}
-.hero h1{font-size:clamp(2.8rem,8vw,5.4rem);font-weight:700;line-height:1.02;margin-bottom:6px}
+.hero h1{font-size:clamp(2.6rem,7.5vw,5rem);font-weight:700;line-height:1.05;margin-bottom:8px}
+.hero h1 .name{display:inline-block;background:linear-gradient(120deg,#0071e3,#22d3ee,#ffb020,#0071e3);
+  background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  animation:gradMove 8s linear infinite;text-shadow:0 0 40px rgba(34,211,238,.25)}
 .hero h1 .line2{display:block;font-size:clamp(1.4rem,4vw,2.4rem);font-weight:600;color:var(--text-2);margin-top:6px}
 .hero .role{font-size:clamp(1rem,2.4vw,1.35rem);font-weight:500;color:var(--text-2);margin:18px 0 10px}
 .hero .role b{color:var(--text)}
@@ -110,8 +113,8 @@ a{color:inherit;text-decoration:none}
 .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn{padding:.85rem 1.4rem;border-radius:13px;font-weight:600;font-size:.95rem;cursor:pointer;
   border:1px solid transparent;transition:.25s;display:inline-flex;align-items:center;gap:8px}
-.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 28px rgba(124,92,255,.4)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(124,92,255,.55)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 28px rgba(34,211,238,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(34,211,238,.5)}
 .btn-ghost{background:var(--panel-strong);border-color:var(--border);color:var(--text)}
 .btn-ghost:hover{background:var(--panel);transform:translateY(-2px)}
 .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:var(--text-3);
@@ -339,7 +342,7 @@ footer a{color:var(--text-2)}
   <div class="hero-grid"></div>
   <div class="hero-content">
     <div class="badge"><span class="pulse"></span>Disponível para oportunidades</div>
-    <h1>Rubens<span class="grad-text"> Pereira</span><span class="line2">Fernandes</span></h1>
+    <h1><span class="name grad-text">Rubens Pereira Fernandes</span></h1>
     <div class="role">Especialista em <b>Logística</b> &amp; <b>Tecnologia</b></div>
     <div class="hero-meta">
       <span>📍 Limoeiro, PE</span>
